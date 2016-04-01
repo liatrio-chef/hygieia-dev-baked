@@ -1,6 +1,6 @@
 hygieia-dev-baked Vagrant Box
 ========================
-An baked vagrant box that spins up a pipeline consisting of archiva, github, sonarqube, jenkins, tomcat, and hygieia.
+A baked vagrant box that spins up a pipeline consisting of archiva, github, sonarqube, jenkins, tomcat, and hygieia.
 
 The unbaked version can be found here: https://github.com/liatrio-chef/hygieia-dev-unbaked
 
@@ -38,6 +38,11 @@ Pipeline (Internal IP 192.168.100.10)
 
 - Hygieia - Browse to http://localhost:13000/ 
   - create a user and dashboard, the collectors are aware of the different components
+
+Configuration
+-------------
+Modify /home/vagrant/dashboard.properties to point to your existing servers and then restart all collectors by running:
+ `cd /etc/systemd/system; sudo systemctl restart hygieia-*`
 
 License and Authors
 -------------------
