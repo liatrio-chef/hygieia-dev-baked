@@ -8,9 +8,7 @@ The baked version can be found here: https://github.com/liatrio-chef/hygieia-dev
 
 Requirements
 ------------
-ChefDK must be installed: https://downloads.chef.io/chef-dk/
-
-vagrant-berkshelf plugin must installed: `vagrant plugin install vagrant-berkshelf`
+Vagrant 1.8.1
 
 Usage
 -----
@@ -37,7 +35,8 @@ Pipeline (Internal IP 192.168.100.10)
   - petclinic is deployed to a link in the form of http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/ - which can be be derived from the jenkins build console output
 
 - Hygieia - Browse to http://localhost:13000/ 
-  - create a user and dashboard, the collectors are aware of the different components
+  - admin :: password
+  - an existing spring-petclinic dashboard is configured
 
 Configuration
 -------------
