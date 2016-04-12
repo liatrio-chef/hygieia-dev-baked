@@ -32,15 +32,16 @@ Pipeline (Internal IP 192.168.100.10)
   - admin :: admin
 
 - Tomcat - Browse to [http://localhost:18082/](http://localhost:18082/)
-  - petclinic is deployed to a link in the form of http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/ - which can be be derived from the jenkins build console output
+  - petclinic is deployed to a link in the form of [http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/](http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/) - which can be be derived from the jenkins build console output
 
-- Hygieia - Browse to [http://localhost:13000/](http://localhost:13000/) 
+- Hygieia - Browse to [http://localhost:13000/](http://localhost:13000/)
   - admin :: password
   - an existing spring-petclinic dashboard is configured
 
 Configuration
 -------------
 Modify /home/vagrant/dashboard.properties to point to your existing servers and then restart all collectors by running:
+
  `cd /etc/systemd/system; sudo systemctl restart hygieia-*`
 
 License and Authors
