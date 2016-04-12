@@ -19,28 +19,29 @@ Usage
 ![Alt text](media/pipeline.png)
 
 Pipeline (Internal IP 192.168.100.10)
-- Jenkins - Browse to http://localhost:18083/ 
+- Jenkins - Browse to [http://localhost:18083/](http://localhost:18083/)
   - may need to build petclinic 1-3x due to network issues if archiva fails to mirror artifacts
   - on successful build the war is deployed to the tomcat instance by scp'ing the artifact from archiva to /opt/tomcat_petclinic/webapps
 
-- Archiva - Browse to http://localhost:18081/
+- Archiva - Browse to [http://localhost:18081/](http://localhost:18081/)
   - admin :: admin1
   - snapshots :: snapshots1
   - deploy :: deploy1
 
-- Sonarqube - Browse to http://localhost:19000/
+- Sonarqube - Browse to [http://localhost:19000/](http://localhost:19000/)
   - admin :: admin
 
-- Tomcat - Browse to http://localhost:18082/
-  - petclinic is deployed to a link in the form of http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/ - which can be be derived from the jenkins build console output
+- Tomcat - Browse to [http://localhost:18082/](http://localhost:18082/)
+  - petclinic is deployed to a link in the form of [http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/](http://localhost:18082/spring-petclinic-4.2.4-20160314.054124-1/) - which can be be derived from the jenkins build console output
 
-- Hygieia - Browse to http://localhost:13000/ 
+- Hygieia - Browse to [http://localhost:13000/](http://localhost:13000/)
   - admin :: password
   - an existing spring-petclinic dashboard is configured
 
 Configuration
 -------------
 Modify /home/vagrant/dashboard.properties to point to your existing servers and then restart all collectors by running:
+
  `cd /etc/systemd/system; sudo systemctl restart hygieia-*`
 
 License and Authors
