@@ -18,6 +18,7 @@ Vagrant.configure(2) do |config|
     hygieia.vm.network :forwarded_port, guest: 8083, host: 18083 # jenkins
     hygieia.vm.network :forwarded_port, guest: 3000, host: 13000 # hygieia
     hygieia.vm.network :forwarded_port, guest: 8080, host: 18080 # hygieia-api
+    hygieia.vm.network :forwarded_port, guest: 27017, host: 37017 # mongodb
 
     hygieia.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -26,7 +27,7 @@ Vagrant.configure(2) do |config|
       #v.customize ["modifyvm", :id, "--name", "hygieia-liatrio"]
     end
 
-    hygieia.vm.provision "shell", inline: "systemctl enable tomcat_petclinic && firewall-cmd --permanent --add-port=8081/tcp --add-port=9000/tcp --add-port=8082/tcp --add-port=8080/tcp && firewall-cmd --reload && echo '192.168.100.40 imbucd' >> /etc/hosts"
+    #hygieia.vm.provision "shell", inline: "touch /root/test"
 
   end
 
