@@ -1,6 +1,6 @@
 hygieia-dev-baked Vagrant Box
 ========================
-A baked vagrant box that spins up a pipeline consisting of archiva, github, sonarqube, jenkins, tomcat, and hygieia.
+A baked vagrant box that spins up a pipeline consisting of archiva, github, sonarqube, jenkins, tomcat, selenium, and hygieia.
 
 The unbaked version can be found here: https://github.com/liatrio-chef/hygieia-dev-unbaked
 
@@ -37,6 +37,11 @@ Pipeline (Internal IP 192.168.100.10)
 - Hygieia - Browse to [http://localhost:13000/](http://localhost:13000/)
   - admin :: password
   - an existing spring-petclinic dashboard is configured
+
+- Selenium
+  - Chrome and Firefox are provided
+  - Each run as a Jenkins to test searching for an Owner in the Petclinic app.
+  - A screenshot is captured for each browser in /var/lib/jenkins/jobs/selenium-chrome-petclinic-test/workspace/checkup_chrome.png and /var/lib/jenkins/jobs/selenium-firefox-petclinic-test/workspace/checkup_firefox.png
 
 Configuration
 -------------
